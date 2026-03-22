@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="profile-modal" id="profileModal">
+            <div class="profile-header">
+                <div class="profile-avatar"><i class="fa-solid fa-user"></i></div>
+                <h3 style="color: var(--text-main); font-size: 18px;">Biodata Mahasiswa</h3>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <div class="info-label">Nama</div>
+                    <div class="info-value">Andhika Kusuma W</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">NIM</div>
+                    <div class="info-value">1234567890</div> </div>
+                <div class="info-item">
+                    <div class="info-label">Kelas</div>
+                    <div class="info-value">IF-01</div> </div>
+            </div>
+        </div>
+
+        <header>
+            <div class="logo">MyNotes</div>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #888;"></i>
+                    <input type="text" placeholder="Search your sanctuary...">
+                </div>
+                <button class="profile-btn" id="profileBtn">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="left-panel">
+                <div class="header-text">
+                    <h4>Personal Journal</h4>
+                    <h1>Daily Reflections</h1>
+                    <p>A quiet space for your thoughts, studies, and creative sparks.<br>Capture everything, lose nothing.</p>
+                </div>
+
+                <div class="form-card">
+                    <div class="form-header">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span id="formTitle">New Entry</span>
+                    </div>
+                    <form id="noteForm">
+                        <input type="hidden" id="noteId">
+                        <div class="form-group">
+                            <label>Judul</label>
+                            <input type="text" id="judul" placeholder="Note title..." required>
+                        </div>
+                        <div class="form-group">
+                            <label>Isi</label>
+                            <textarea id="isi" placeholder="Write your thoughts here..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submitBtn">Tambah Catatan +</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="right-panel" id="notesList">
+                </div>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
