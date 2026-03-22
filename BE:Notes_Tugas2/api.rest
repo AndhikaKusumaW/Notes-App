@@ -1,0 +1,42 @@
+# API Testing
+GET http://localhost:3000/ HTTP/1.1
+
+###
+# GET : All Notes
+GET http://localhost:3000/api/v1/notes HTTP/1.1
+Content-Type: application/json
+
+###
+# GET : User by ID
+GET http://localhost:3000/api/v1/notes/3 HTTP/1.1
+Content-Type: application/json
+
+###
+# POST : Create Notes
+POST http://localhost:3000/api/v1/notes HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "Ardha",
+  "judul": "Dairy Ardha",
+  "isi": "Malam ini aku mumet",
+  "tanggal_dibuat": "22-03-2026"
+}
+
+###
+# PUT : Update Notes
+PUT http://localhost:3000/api/v1/notes/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "Ardha",
+  "judul": "Dairy Ardha",
+  "isi": "Aku udah happy",
+  "tanggal_dibuat": "22-03-2026"
+}
+
+###
+# DELETE : Delete Notes
+DELETE http://localhost:3000/api/v1/notes/1 HTTP/1.1
+Content-Type: application/json
+
