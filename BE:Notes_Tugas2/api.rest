@@ -7,7 +7,7 @@ GET http://localhost:3000/api/v1/notes HTTP/1.1
 Content-Type: application/json
 
 ###
-# GET : User by ID
+# GET : Notes by ID
 GET http://localhost:3000/api/v1/notes/3 HTTP/1.1
 Content-Type: application/json
 
@@ -17,9 +17,9 @@ POST http://localhost:3000/api/v1/notes HTTP/1.1
 Content-Type: application/json
 
 {
-  "id": "Ardha",
-  "judul": "Dairy Ardha",
-  "isi": "Malam ini aku mumet",
+  "id": "Andhika",
+  "judul": "To Do List",
+  "isi": "Aku hari ini mau nugas sama mau ngaji",
   "tanggal_dibuat": "22-03-2026"
 }
 
