@@ -8,7 +8,11 @@ const app = express();
 const cors = require("cors");
 
 // Izinkan origin frontend lokal yang umum dipakai saat development
-app.use(cors());
+app.use(cors({
+  origin: '*', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Middleware untuk parsing JSON
 app.use(express.json());
